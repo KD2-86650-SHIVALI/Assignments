@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Speaker form</title>
+
+    <style>
+        .form-row {
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: 20px;
+      gap: 16px;
+    }
+
+    body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #e8edf2;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            padding: 40px 16px;
+        }
+   .btn-primary {
+            background-color: #4a90d9;
+            color: #fff;
+        }
+    h1 {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #1a1a2e;
+            margin-bottom: 6px;
+        }
+
+        label {
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: #1a1a2e;
+        }
+
+    </style>
+</head>
+<body>
+    <div>
+
+        <form>
+        <h1>Speaker Submission</h1>
+        <p>Want to speak about ourr fake conference? Fill out this form</p>
+
+            <div>
+
+        <label for="name">First Name</label>
+        <input type = "text" id="name" name="name" placeholder=""/>
+        </div>
+
+        <div>
+        <br>
+
+        <label for="email">Email:</label>
+        <input type = "email" id="email" name="email" placeholder="you@example.com"/>
+        </div>
+        <br>
+
+        <div>
+        <label for="talk_type">Type of Talk</label>
+        <input type = "radio" id="talk_type" name="talk_type" value="Main Stage"/>Main Stage
+        <input type="radio" id="talk_type" name="talk_type" value="Workshop"/> Workshop
+        </div>
+        <br>
+
+        <div>
+        <label for="category">T-Shirt Size</label>
+        <select id="category">
+        <option value="Extra Small">Extra Small</option>
+         <option value="Small">Small</option>
+        <option value="Medium">Medium</option>
+        <option value="Large">Large</option>
+        </select>
+        </div>
+        <br>
+
+        <div class="form-row">
+          <label class="form-label" for="abstract">Abstract</label>
+          <div>
+            <textarea id="abstract" name="abstract"></textarea>
+            <br>
+            <span class="hint">Describe your talk in 500 words or less</span>
+            <br>
+          </div>
+        </div>
+
+        </form>
+
+    
+
+    <div>
+        <input type="checkbox" id="toText" name="toText">
+        <label for="toText">I'm actually available the date of the talk</label>
+        
+    </div>
+    <br>
+    <div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+
+    </div>
+</body>
+</html>

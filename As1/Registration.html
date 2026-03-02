@@ -1,0 +1,331 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+
+
+    <style>
+        .form-containe {
+            background: white;
+            border-radius: 16px;
+            padding: 40px 44px 44px;
+            width: 100%;
+            max-width: 660px;
+            box-shadow: 0 8px 40px rgba(80, 60, 160, 0.15);
+        }
+
+        .form-group {
+    display: flex;
+    flex-direction: column;  /* ← this stacks label ON TOP of input */
+    gap: 8px;
+}
+         
+        h1 {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #1a1a2e;
+            margin-bottom: 6px;
+        }
+
+        .btn-register {
+            width: 100%;
+            padding: 16px;
+            border: none;
+            border-radius: 10px;
+            background: linear-gradient(90deg, #6a82e8 0%, #9b6fd4 100%);
+            color: white;
+            font-size: 1.05rem;
+            font-weight: 600;
+            font-family: inherit;
+            letter-spacing: 0.5px;
+            cursor: pointer;
+            transition: opacity 0.2s, transform 0.1s;
+        }
+        label {
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: #1a1a2e;
+        }
+        body {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #a8b8e8 0%, #b8a8e8 50%, #9898d8 100%);
+            font-family: 'Segoe UI', Arial, sans-serif;
+            padding: 40px 16px;
+        }
+    </style>
+</head>
+<body>
+    
+<div class="form-containe">
+    <form>
+        <h1>Registration</h1><br>
+
+
+        <div class="form-group">
+        <div style="display: flex; gap: 20px;">
+            
+    <div>
+    
+        <label for="fullname">FullName</label>
+        <input type="text" id="fullname" name="fullname" placeholder="Enter your Fullname" />
+        
+
+    </div>
+    <div><div class="form-group">
+        <label for="username">Username</label>
+        <input type="text" id="username" name="username" placeholder="Enter your username" />
+        </div>
+    </div>
+            </div>
+</div>
+<br>
+
+<div class="form-group">
+<div style="display: flex; gap: 20px;">
+    <div>
+        <label for="email">Emaiil</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email" />
+    </div>
+    <div>
+        <label for="phone">Phone Number</label>
+        <input type="tel" id="phone" name="phone" placeholder="Enter your Number" />
+    </div>
+</div>
+<br>
+<div style="display: flex; gap: 20px;">
+    <div>
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" placeholder="Enter your password" />
+    </div>
+    <div>
+        <label for="confirm_password">Confirm Password</label>
+        <input type="password" id="confirm_password" name="confirm_password" placeholder="Confirm your Password" />
+    </div>
+</div>
+<br>
+<div>
+    <label for="gender">Gender</label>
+    <input type="radio" id="male" name="gender" value="Male" />
+    <label for="male">Male</label>
+
+    <input type="radio" id="female" name="gender" value="Female" />
+    <label for="female">Female</label>
+
+    <input type="radio" id="not_say" name="gender" value="Prefer not to say" />
+    <label for="not_say">Prefer not to say</label>
+</div>
+<br>
+<div>
+    <button type="submit" class=" btn btn-register">Register</button>
+</div>
+        
+    </form>
+</div>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #a8b8e8 0%, #b8a8e8 50%, #9898d8 100%);
+            font-family: 'Segoe UI', Arial, sans-serif;
+            padding: 40px 16px;
+        }
+
+        
+        .form-container {
+            background: white;
+            border-radius: 16px;
+            padding: 40px 44px 44px;
+            width: 100%;
+            max-width: 660px;
+            box-shadow: 0 8px 40px rgba(80, 60, 160, 0.15);
+        }
+
+        h1 {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #1a1a2e;
+            margin-bottom: 24px;
+        }
+
+        
+        .form-row {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+
+        
+        .form-group {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        label {
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: #1a1a2e;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        input[type="password"] {
+            width: 100%;
+            padding: 13px 16px;
+            border: 1.5px solid #e0e0f0;
+            border-radius: 8px;
+            font-size: 0.92rem;
+            font-family: inherit;
+            color: #333;
+            outline: none;
+        }
+
+        input:focus {
+            border-color: #8b8fd8;
+            box-shadow: 0 0 0 3px rgba(139, 143, 216, 0.15);
+        }
+
+        input::placeholder {
+            color: #b0b0c8;
+        }
+
+        
+        .gender-row {
+            display: flex;
+            align-items: center;
+            gap: 24px;
+            margin-bottom: 24px;
+        }
+
+        .gender-row .gender-label {
+            font-weight: 600;
+            font-size: 0.95rem;
+            color: #1a1a2e;
+        }
+
+        .gender-option {
+            display: flex;
+            align-items: center;
+            gap: 7px;
+            font-size: 0.92rem;
+            color: #333;
+            cursor: pointer;
+        }
+
+        .gender-option input[type="radio"] {
+            width: 16px;
+            height: 16px;
+            accent-color: #8b8fd8;
+            cursor: pointer;
+        }
+
+        .btn-register {
+            width: 100%;
+            padding: 16px;
+            border: none;
+            border-radius: 10px;
+            background: linear-gradient(90deg, #6a82e8 0%, #9b6fd4 100%);
+            color: white;
+            font-size: 1.05rem;
+            font-weight: 600;
+            font-family: inherit;
+            letter-spacing: 0.5px;
+            cursor: pointer;
+        }
+
+        .btn-register:hover {
+            opacity: 0.9;
+        }
+    </style>
+</head>
+<body>
+
+
+<div class="form-container">
+    <form>
+        <h1>Registration</h1>
+
+        
+        <div class="form-row">
+            <div class="form-group">
+                <label for="fullname">Full Name</label>
+                <input type="text" id="fullname" name="fullname" placeholder="Enter your Fullname" />
+            </div>
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" placeholder="Enter your username" />
+            </div>
+        </div>
+
+        
+        <div class="form-row">
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" />
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" placeholder="Enter your Number" />
+            </div>
+        </div>
+
+        <div class="form-row">
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" placeholder="Enter your password" />
+            </div>
+            <div class="form-group">
+                <label for="confirm_password">Confirm Password</label>
+                <input type="password" id="confirm_password" name="confirm_password" placeholder="Confirm your Password" />
+            </div>
+        </div>
+
+        
+        <div class="gender-row">
+            <span class="gender-label">Gender</span>
+            <label class="gender-option">
+                <input type="radio" id="male" name="gender" value="Male" />
+                Male
+            </label>
+            <label class="gender-option">
+                <input type="radio" id="female" name="gender" value="Female" />
+                Female
+            </label>
+            <label class="gender-option">
+                <input type="radio" id="not_say" name="gender" value="Prefer not to say" />
+                Prefer not to say
+            </label>
+        </div>
+
+        <button type="submit" class="btn-register">Register</button>
+
+    </form>
+</div>
+
+</body>
+</html>
