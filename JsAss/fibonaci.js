@@ -1,3 +1,5 @@
+
+//Q1. Print Fibonacci series for n numbers
 function fib(n){
     let a=0, b=1;
     let result = [0];

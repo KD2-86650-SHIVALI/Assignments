@@ -1,4 +1,4 @@
-
+//Q3. Least Common Multiple (LCM)
 function gcd(a, b) {
 while (b !== 0) {
     let temp = b;
